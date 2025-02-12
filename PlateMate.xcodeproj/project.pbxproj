@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		69B04AE32D5D503B0086DCD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B04AC82D5D50390086DCD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69B04ACF2D5D50390086DCD8;
+			remoteInfo = PlateMate;
+		};
+		69B04AED2D5D503B0086DCD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B04AC82D5D50390086DCD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69B04ACF2D5D50390086DCD8;
+			remoteInfo = PlateMate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69B04AD02D5D50390086DCD8 /* PlateMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlateMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B04AE22D5D503B0086DCD8 /* PlateMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlateMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B04AEC2D5D503B0086DCD8 /* PlateMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlateMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		69B04AD22D5D50390086DCD8 /* PlateMate */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PlateMate;
+			sourceTree = "<group>";
+		};
+		69B04AE52D5D503B0086DCD8 /* PlateMateTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PlateMateTests;
+			sourceTree = "<group>";
+		};
+		69B04AEF2D5D503B0086DCD8 /* PlateMateUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PlateMateUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69B04ACD2D5D50390086DCD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B04ADF2D5D503B0086DCD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B04AE92D5D503B0086DCD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69B04AC72D5D50390086DCD8 = {
+			isa = PBXGroup;
+			children = (
+				69B04AD22D5D50390086DCD8 /* PlateMate */,
+				69B04AE52D5D503B0086DCD8 /* PlateMateTests */,
+				69B04AEF2D5D503B0086DCD8 /* PlateMateUITests */,
+				69B04AD12D5D50390086DCD8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69B04AD12D5D50390086DCD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69B04AD02D5D50390086DCD8 /* PlateMate.app */,
+				69B04AE22D5D503B0086DCD8 /* PlateMateTests.xctest */,
+				69B04AEC2D5D503B0086DCD8 /* PlateMateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69B04ACF2D5D50390086DCD8 /* PlateMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69B04AF62D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate" */;
+			buildPhases = (
+				69B04ACC2D5D50390086DCD8 /* Sources */,
+				69B04ACD2D5D50390086DCD8 /* Frameworks */,
+				69B04ACE2D5D50390086DCD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				69B04AD22D5D50390086DCD8 /* PlateMate */,
+			);
+			name = PlateMate;
+			packageProductDependencies = (
+			);
+			productName = PlateMate;
+			productReference = 69B04AD02D5D50390086DCD8 /* PlateMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69B04AE12D5D503B0086DCD8 /* PlateMateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69B04AF92D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMateTests" */;
+			buildPhases = (
+				69B04ADE2D5D503B0086DCD8 /* Sources */,
+				69B04ADF2D5D503B0086DCD8 /* Frameworks */,
+				69B04AE02D5D503B0086DCD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69B04AE42D5D503B0086DCD8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				69B04AE52D5D503B0086DCD8 /* PlateMateTests */,
+			);
+			name = PlateMateTests;
+			packageProductDependencies = (
+			);
+			productName = PlateMateTests;
+			productReference = 69B04AE22D5D503B0086DCD8 /* PlateMateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		69B04AEB2D5D503B0086DCD8 /* PlateMateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69B04AFC2D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMateUITests" */;
+			buildPhases = (
+				69B04AE82D5D503B0086DCD8 /* Sources */,
+				69B04AE92D5D503B0086DCD8 /* Frameworks */,
+				69B04AEA2D5D503B0086DCD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69B04AEE2D5D503B0086DCD8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				69B04AEF2D5D503B0086DCD8 /* PlateMateUITests */,
+			);
+			name = PlateMateUITests;
+			packageProductDependencies = (
+			);
+			productName = PlateMateUITests;
+			productReference = 69B04AEC2D5D503B0086DCD8 /* PlateMateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69B04AC82D5D50390086DCD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					69B04ACF2D5D50390086DCD8 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					69B04AE12D5D503B0086DCD8 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 69B04ACF2D5D50390086DCD8;
+					};
+					69B04AEB2D5D503B0086DCD8 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 69B04ACF2D5D50390086DCD8;
+					};
+				};
+			};
+			buildConfigurationList = 69B04ACB2D5D50390086DCD8 /* Build configuration list for PBXProject "PlateMate" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69B04AC72D5D50390086DCD8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 69B04AD12D5D50390086DCD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69B04ACF2D5D50390086DCD8 /* PlateMate */,
+				69B04AE12D5D503B0086DCD8 /* PlateMateTests */,
+				69B04AEB2D5D503B0086DCD8 /* PlateMateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69B04ACE2D5D50390086DCD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B04AE02D5D503B0086DCD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B04AEA2D5D503B0086DCD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69B04ACC2D5D50390086DCD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B04ADE2D5D503B0086DCD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B04AE82D5D503B0086DCD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69B04AE42D5D503B0086DCD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69B04ACF2D5D50390086DCD8 /* PlateMate */;
+			targetProxy = 69B04AE32D5D503B0086DCD8 /* PBXContainerItemProxy */;
+		};
+		69B04AEE2D5D503B0086DCD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69B04ACF2D5D50390086DCD8 /* PlateMate */;
+			targetProxy = 69B04AED2D5D503B0086DCD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		69B04AF42D5D503B0086DCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69B04AF52D5D503B0086DCD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69B04AF72D5D503B0086DCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlateMate/Preview Content\"";
+				DEVELOPMENT_TEAM = 4FJYNWXA5U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = planetbased.PlateMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69B04AF82D5D503B0086DCD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlateMate/Preview Content\"";
+				DEVELOPMENT_TEAM = 4FJYNWXA5U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = planetbased.PlateMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69B04AFA2D5D503B0086DCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FJYNWXA5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = planetbased.PlateMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlateMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlateMate";
+			};
+			name = Debug;
+		};
+		69B04AFB2D5D503B0086DCD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FJYNWXA5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = planetbased.PlateMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlateMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlateMate";
+			};
+			name = Release;
+		};
+		69B04AFD2D5D503B0086DCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FJYNWXA5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = planetbased.PlateMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlateMate;
+			};
+			name = Debug;
+		};
+		69B04AFE2D5D503B0086DCD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FJYNWXA5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = planetbased.PlateMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlateMate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69B04ACB2D5D50390086DCD8 /* Build configuration list for PBXProject "PlateMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B04AF42D5D503B0086DCD8 /* Debug */,
+				69B04AF52D5D503B0086DCD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69B04AF62D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B04AF72D5D503B0086DCD8 /* Debug */,
+				69B04AF82D5D503B0086DCD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69B04AF92D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B04AFA2D5D503B0086DCD8 /* Debug */,
+				69B04AFB2D5D503B0086DCD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69B04AFC2D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B04AFD2D5D503B0086DCD8 /* Debug */,
+				69B04AFE2D5D503B0086DCD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69B04AC82D5D50390086DCD8 /* Project object */;
+}
