@@ -23,4 +23,24 @@ final class WarmUpSchema {
         self.note = note
         self.sets = sets
     }
+
+    func calculate(workingLoad: Double, weightIncrement: Double = 2.5) -> [ActualWarmUpSet] {
+        var warmUpSets: [ActualWarmUpSet] = []
+
+        for (element) in self.sets {
+            let reps = element.reps
+
+            var load = element.fixedLoad
+            var percent = element.percentageOfWorkingLoad
+
+            if load != 0.0 {
+                percent = load/workingLoad
+            } else {
+                load = ((workingLoad * percent)/weightIncrement).rounded() * weightIncrement
+            }
+            warmUpSets.append(ActualWarmUpSet(reps: reps, load: load, percent: percent))
+        }
+
+        return warmUpSets
+    }
 }
