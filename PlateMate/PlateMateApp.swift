@@ -12,6 +12,7 @@ import SwiftData
 struct PlateMateApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
+            WarmUpSchema.self,
             Item.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
