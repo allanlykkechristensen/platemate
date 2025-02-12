@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		69B04AD02D5D50390086DCD8 /* PlateMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlateMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		69B04AE22D5D503B0086DCD8 /* PlateMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlateMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		69B04AEC2D5D503B0086DCD8 /* PlateMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlateMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B04AD02D5D50390086DCD8 /* PlateMate - Gym Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlateMate - Gym Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B04AE22D5D503B0086DCD8 /* PlateMate - Gym BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlateMate - Gym BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B04AEC2D5D503B0086DCD8 /* PlateMate - Gym BuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlateMate - Gym BuddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,9 +85,9 @@
 		69B04AD12D5D50390086DCD8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69B04AD02D5D50390086DCD8 /* PlateMate.app */,
-				69B04AE22D5D503B0086DCD8 /* PlateMateTests.xctest */,
-				69B04AEC2D5D503B0086DCD8 /* PlateMateUITests.xctest */,
+				69B04AD02D5D50390086DCD8 /* PlateMate - Gym Buddy.app */,
+				69B04AE22D5D503B0086DCD8 /* PlateMate - Gym BuddyTests.xctest */,
+				69B04AEC2D5D503B0086DCD8 /* PlateMate - Gym BuddyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69B04ACF2D5D50390086DCD8 /* PlateMate */ = {
+		69B04ACF2D5D50390086DCD8 /* PlateMate - Gym Buddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69B04AF62D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate" */;
+			buildConfigurationList = 69B04AF62D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate - Gym Buddy" */;
 			buildPhases = (
 				69B04ACC2D5D50390086DCD8 /* Sources */,
 				69B04ACD2D5D50390086DCD8 /* Frameworks */,
@@ -110,16 +110,16 @@
 			fileSystemSynchronizedGroups = (
 				69B04AD22D5D50390086DCD8 /* PlateMate */,
 			);
-			name = PlateMate;
+			name = "PlateMate - Gym Buddy";
 			packageProductDependencies = (
 			);
 			productName = PlateMate;
-			productReference = 69B04AD02D5D50390086DCD8 /* PlateMate.app */;
+			productReference = 69B04AD02D5D50390086DCD8 /* PlateMate - Gym Buddy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		69B04AE12D5D503B0086DCD8 /* PlateMateTests */ = {
+		69B04AE12D5D503B0086DCD8 /* PlateMate - Gym BuddyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69B04AF92D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMateTests" */;
+			buildConfigurationList = 69B04AF92D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate - Gym BuddyTests" */;
 			buildPhases = (
 				69B04ADE2D5D503B0086DCD8 /* Sources */,
 				69B04ADF2D5D503B0086DCD8 /* Frameworks */,
@@ -133,16 +133,16 @@
 			fileSystemSynchronizedGroups = (
 				69B04AE52D5D503B0086DCD8 /* PlateMateTests */,
 			);
-			name = PlateMateTests;
+			name = "PlateMate - Gym BuddyTests";
 			packageProductDependencies = (
 			);
 			productName = PlateMateTests;
-			productReference = 69B04AE22D5D503B0086DCD8 /* PlateMateTests.xctest */;
+			productReference = 69B04AE22D5D503B0086DCD8 /* PlateMate - Gym BuddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		69B04AEB2D5D503B0086DCD8 /* PlateMateUITests */ = {
+		69B04AEB2D5D503B0086DCD8 /* PlateMate - Gym BuddyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69B04AFC2D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMateUITests" */;
+			buildConfigurationList = 69B04AFC2D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate - Gym BuddyUITests" */;
 			buildPhases = (
 				69B04AE82D5D503B0086DCD8 /* Sources */,
 				69B04AE92D5D503B0086DCD8 /* Frameworks */,
@@ -156,11 +156,11 @@
 			fileSystemSynchronizedGroups = (
 				69B04AEF2D5D503B0086DCD8 /* PlateMateUITests */,
 			);
-			name = PlateMateUITests;
+			name = "PlateMate - Gym BuddyUITests";
 			packageProductDependencies = (
 			);
 			productName = PlateMateUITests;
-			productReference = 69B04AEC2D5D503B0086DCD8 /* PlateMateUITests.xctest */;
+			productReference = 69B04AEC2D5D503B0086DCD8 /* PlateMate - Gym BuddyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 69B04ACB2D5D50390086DCD8 /* Build configuration list for PBXProject "PlateMate" */;
+			buildConfigurationList = 69B04ACB2D5D50390086DCD8 /* Build configuration list for PBXProject "PlateMate - Gym Buddy" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69B04ACF2D5D50390086DCD8 /* PlateMate */,
-				69B04AE12D5D503B0086DCD8 /* PlateMateTests */,
-				69B04AEB2D5D503B0086DCD8 /* PlateMateUITests */,
+				69B04ACF2D5D50390086DCD8 /* PlateMate - Gym Buddy */,
+				69B04AE12D5D503B0086DCD8 /* PlateMate - Gym BuddyTests */,
+				69B04AEB2D5D503B0086DCD8 /* PlateMate - Gym BuddyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		69B04AE42D5D503B0086DCD8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69B04ACF2D5D50390086DCD8 /* PlateMate */;
+			target = 69B04ACF2D5D50390086DCD8 /* PlateMate - Gym Buddy */;
 			targetProxy = 69B04AE32D5D503B0086DCD8 /* PBXContainerItemProxy */;
 		};
 		69B04AEE2D5D503B0086DCD8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69B04ACF2D5D50390086DCD8 /* PlateMate */;
+			target = 69B04ACF2D5D50390086DCD8 /* PlateMate - Gym Buddy */;
 			targetProxy = 69B04AED2D5D503B0086DCD8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -399,6 +399,8 @@
 				DEVELOPMENT_TEAM = 4FJYNWXA5U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Plate Mate - Gym Buddy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +430,8 @@
 				DEVELOPMENT_TEAM = 4FJYNWXA5U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Plate Mate - Gym Buddy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,7 +465,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlateMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlateMate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlateMate - Gym Buddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlateMate - Gym Buddy";
 			};
 			name = Debug;
 		};
@@ -480,7 +484,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlateMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlateMate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlateMate - Gym Buddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlateMate - Gym Buddy";
 			};
 			name = Release;
 		};
@@ -521,7 +525,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69B04ACB2D5D50390086DCD8 /* Build configuration list for PBXProject "PlateMate" */ = {
+		69B04ACB2D5D50390086DCD8 /* Build configuration list for PBXProject "PlateMate - Gym Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69B04AF42D5D503B0086DCD8 /* Debug */,
@@ -530,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69B04AF62D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate" */ = {
+		69B04AF62D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate - Gym Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69B04AF72D5D503B0086DCD8 /* Debug */,
@@ -539,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69B04AF92D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMateTests" */ = {
+		69B04AF92D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate - Gym BuddyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69B04AFA2D5D503B0086DCD8 /* Debug */,
@@ -548,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69B04AFC2D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMateUITests" */ = {
+		69B04AFC2D5D503B0086DCD8 /* Build configuration list for PBXNativeTarget "PlateMate - Gym BuddyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69B04AFD2D5D503B0086DCD8 /* Debug */,
