@@ -18,7 +18,8 @@ struct WarmUpSchemaListView: View {
         NavigationStack {
             List {
                 ForEach(warmUpSchemas) { warmUpSchema in
-                    NavigationLink(destination: Text("\(warmUpSchema.name)")) {
+                    NavigationLink(destination:
+                                    WarmUpSchemaDetailView(warmUpSchema: warmUpSchema, onUpdate: onUpdateWarmUpSchema)) {
                         WarmUpSchemaListRow(name: warmUpSchema.name, description: warmUpSchema.note, warmUpSets: warmUpSchema.sets.count)
                     }
                 }.onDelete(perform: deleteWarmUpSchemas)
@@ -73,6 +74,11 @@ struct WarmUpSchemaListView: View {
             newSchema.sets = warmUpSets
 
             modelContext.insert(newSchema)
+        }
+    }
+
+    func onUpdateWarmUpSchema(warmUpSchema: WarmUpSchema) {
+        withAnimation {
         }
     }
 }
