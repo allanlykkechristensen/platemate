@@ -12,7 +12,7 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            WarmUpSchemaListView()
+            WarmUpScreen()
                 .tabItem {
                     Label("Warm-Up", systemImage: "flame.fill")
                 }
