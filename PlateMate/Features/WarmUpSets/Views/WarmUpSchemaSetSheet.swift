@@ -79,17 +79,12 @@ extension WarmUpSchemaSetSheet {
 
 #Preview {
     
-    struct Preview: View {
-        @State var reps = 10
-        @State var percentage = 0.25
-        
-        var body: some View {
-            WarmUpSchemaSetSheet(
-                reps: $reps,
-                percentageOfWorkingLoad: $percentage,
-                onSave: {})
-        }
-    }
+    @Previewable @State var reps = 10
+    @Previewable @State var percentage = 0.25
     
-    return Preview()
+    WarmUpSchemaSetSheet(
+        reps: $reps,
+        percentageOfWorkingLoad: $percentage,
+        onSave: {})
+    
 }
