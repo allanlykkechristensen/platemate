@@ -27,7 +27,7 @@ final class WarmUpSchema {
     func calculate(workingLoad: Double, weightIncrement: Double = 2.5) -> [ActualWarmUpSet] {
         var warmUpSets: [ActualWarmUpSet] = []
 
-        for (element) in self.sets {
+        for (element) in self.sortedSets {
             let reps = element.reps
 
             var load = element.fixedLoad
@@ -42,5 +42,10 @@ final class WarmUpSchema {
         }
 
         return warmUpSets
+    }
+
+    /// Computed property to return warm-up sets in sorted order
+    var sortedSets: [WarmUpSchemaSet] {
+        sets.sorted { $0.order < $1.order }
     }
 }

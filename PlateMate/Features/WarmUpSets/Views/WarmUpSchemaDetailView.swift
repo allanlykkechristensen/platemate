@@ -27,7 +27,7 @@ struct WarmUpSchemaDetailView: View {
             
             Section("Sets") {
                 List {
-                    ForEach(warmUpSchema.sets) { warmUpSet in
+                    ForEach(warmUpSchema.sortedSets) { warmUpSet in
                         Text("\(warmUpSet.reps) x \(warmUpSet.percentageOfWorkingLoad.formatted(.percent))")
                     }.onDelete(perform: removeWarmUpSet)
                 }
