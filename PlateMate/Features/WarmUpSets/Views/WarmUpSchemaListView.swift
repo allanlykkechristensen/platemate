@@ -12,34 +12,41 @@ struct WarmUpSchemaListView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \WarmUpSchema.name) private var warmUpSchemas: [WarmUpSchema]
 
+    @State var showAddWarmUpSchema = false
+
     public var body: some View {
-        List {
-            ForEach(warmUpSchemas) { warmUpSchema in
-                NavigationLink(destination: Text("\(warmUpSchema.name)")) {
-                    WarmUpSchemaListRow(name: warmUpSchema.name, description: warmUpSchema.note, warmUpSets: warmUpSchema.sets.count)
+        NavigationStack {
+            List {
+                ForEach(warmUpSchemas) { warmUpSchema in
+                    NavigationLink(destination: Text("\(warmUpSchema.name)")) {
+                        WarmUpSchemaListRow(name: warmUpSchema.name, description: warmUpSchema.note, warmUpSets: warmUpSchema.sets.count)
+                    }
+                }.onDelete(perform: deleteWarmUpSchemas)
+            }
+            .overlay(
+                Group {
+                    if warmUpSchemas.isEmpty {
+                        ContentUnavailableView(
+                            "No warm-up schemas",
+                            systemImage: "pyramid",
+                            description: Text("Tap '+' to add a new schema.")
+                        )
+                    }
                 }
-            }.onDelete(perform: deleteWarmUpSchemas)
-        }
-        .overlay(
-            Group {
-                if warmUpSchemas.isEmpty {
-                    ContentUnavailableView(
-                        "No warm-up schemas",
-                        systemImage: "pyramid",
-                        description: Text("Tap '+' to add a new schema.")
-                    )
+            )
+            .navigationTitle("Warm-up Schemas")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
+                ToolbarItem {
+                    Button(action: addWarmUpSchema) {
+                        Label("Add Warm-up Schema", systemImage: "plus")
+                    }
                 }
             }
-        )
-        .navigationTitle("Warm-up Schemas")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                EditButton()
-            }
-            ToolbarItem {
-                Button(action: addNewWarmUpSchema) {
-                    Label("Add Warm-up Schema", systemImage: "plus")
-                }
+            .sheet(isPresented: $showAddWarmUpSchema) {
+                NewWarmUpSchemaSheet(onSave: createWarmUpSchema)
             }
         }
     }
@@ -52,9 +59,19 @@ struct WarmUpSchemaListView: View {
         }
     }
 
-    private func addNewWarmUpSchema() {
+    func addWarmUpSchema() {
+        showAddWarmUpSchema = true
+    }
+
+    func createWarmUpSchema(name: String, description: String, warmUpSets: [WarmUpSchemaSet]) {
         withAnimation {
-            let newSchema = WarmUpSchema(name: "New Schema", note: "Example note")
+            let newSchema = WarmUpSchema(name: name, note: description)
+
+            for set in warmUpSets {
+                set.warmUpSchema = newSchema
+            }
+            newSchema.sets = warmUpSets
+
             modelContext.insert(newSchema)
         }
     }
