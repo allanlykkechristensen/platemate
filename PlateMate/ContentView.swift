@@ -17,7 +17,7 @@ struct ContentView: View {
                     Label("Warm-Up", systemImage: "flame.fill")
                 }
 
-            Text("Not yet supported")
+            SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
