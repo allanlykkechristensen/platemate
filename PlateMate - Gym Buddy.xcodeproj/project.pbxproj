@@ -27,6 +27,7 @@
 		69B04AD02D5D50390086DCD8 /* PlateMate - Gym Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlateMate - Gym Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B04AE22D5D503B0086DCD8 /* PlateMate - Gym BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlateMate - Gym BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B04AEC2D5D503B0086DCD8 /* PlateMate - Gym BuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlateMate - Gym BuddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B04B292D5EC5690086DCD8 /* PlateMate---Gym-Buddy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PlateMate---Gym-Buddy-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		69B04AC72D5D50390086DCD8 = {
 			isa = PBXGroup;
 			children = (
+				69B04B292D5EC5690086DCD8 /* PlateMate---Gym-Buddy-Info.plist */,
 				69B04AD22D5D50390086DCD8 /* PlateMate */,
 				69B04AE52D5D503B0086DCD8 /* PlateMateTests */,
 				69B04AEF2D5D503B0086DCD8 /* PlateMateUITests */,
@@ -399,8 +401,7 @@
 				DEVELOPMENT_TEAM = 4FJYNWXA5U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Plate Mate - Gym Buddy";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_FILE = "PlateMate---Gym-Buddy-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,8 +431,7 @@
 				DEVELOPMENT_TEAM = 4FJYNWXA5U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Plate Mate - Gym Buddy";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_FILE = "PlateMate---Gym-Buddy-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
