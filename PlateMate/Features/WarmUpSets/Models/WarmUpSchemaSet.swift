@@ -25,4 +25,13 @@ final class WarmUpSchemaSet {
         self.fixedLoad = fixedLoad
         self.percentageOfWorkingLoad = percentageOfWorkingLoad
     }
+
+    /// Computed property that determines if this set is using percentage or fixed load
+    var loadType: LoadType {
+        fixedLoad > 0 ? .fixedLoad : .percentage
+    }
+
+    enum LoadType {
+        case percentage, fixedLoad
+    }
 }

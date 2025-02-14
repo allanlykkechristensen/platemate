@@ -12,16 +12,35 @@ struct WarmUpSchemaSetSheet: View {
     @Environment(\.dismiss) var dismiss
     @Binding var reps: Int
     @Binding var percentageOfWorkingLoad: Double
+    @Binding var fixedLoad: Double
+    @State private var loadType: LoadType = .percentage
     var onSave: () -> Void
-    
+
     var body: some View {
         NavigationView {
             Form {
                 Section("Number of reps") {
                     RepsView(reps: $reps)
                 }
-                Section("Percentage of working load") {
-                    PercentageSelector(value: $percentageOfWorkingLoad)
+
+                Section("Load Type") {
+                    Picker("Specify Load As", selection: $loadType) {
+                        ForEach(LoadType.allCases, id: \.self) { type in
+                            Text(type.localized).tag(type)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                }
+
+                if loadType == .percentage {
+                    Section("Percentage of Working Load") {
+                        PercentageSelector(value: $percentageOfWorkingLoad)
+                    }
+                } else {
+                    Section("Fixed Load") {
+                        TextField("Fixed Load", value: $fixedLoad, formatter: numberFormatter)
+                            .keyboardType(.decimalPad)
+                    }
                 }
             }
             .navigationTitle("New Warm-up Set")
@@ -34,14 +53,43 @@ struct WarmUpSchemaSetSheet: View {
                         Text("Cancel")
                     }),
                 trailing:
-                    Button(action: {
-                        onSave()
-                        dismiss()
-                    }, label: {
+                    Button(action: addNewWarmUpSet, label: {
                         Text("Add")
                     })
             )
         }
+    }
+
+    enum LoadType: String, Codable, CaseIterable {
+        case percentage
+        case fixedLoad
+
+        var localized: LocalizedStringKey {
+            switch self {
+            case .percentage:
+                return "Percentage"
+            case .fixedLoad:
+                return "Fixed Load"
+            }
+        }
+    }
+
+    private var numberFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }
+
+    private func addNewWarmUpSet() {
+        switch loadType {
+        case .percentage:
+            fixedLoad = 0.0
+        case .fixedLoad:
+            percentageOfWorkingLoad = 0.0
+        }
+        onSave()
+        dismiss()
     }
 }
 
@@ -78,13 +126,15 @@ extension WarmUpSchemaSetSheet {
 }
 
 #Preview {
-    
+
     @Previewable @State var reps = 10
     @Previewable @State var percentage = 0.25
-    
+    @Previewable @State var fixedLoad = 0.0
+
     WarmUpSchemaSetSheet(
         reps: $reps,
         percentageOfWorkingLoad: $percentage,
+        fixedLoad: $fixedLoad,
         onSave: {})
-    
+
 }

@@ -17,6 +17,7 @@ struct NewWarmUpSchemaSheet: View {
     @State private var showAddSet = false
     @State private var reps: Int = 0
     @State private var percentageOfWorkingLoad: Double = 0.0
+    @State private var fixedLoad: Double = 0.0
     @State private var order: Int = 0
     
     var onSave: (_ name: String, _ description: String, _ warmUpSets: [WarmUpSchemaSet]) -> Void
@@ -31,7 +32,7 @@ struct NewWarmUpSchemaSheet: View {
                 
                 Section {
                     ForEach(warmUpSets) { wuSet in
-                        Text("\(wuSet.reps) x \(wuSet.percentageOfWorkingLoad.formatted(.percent))")
+                        WarmUpSchemaSetRow(warmUpSet: wuSet)
                     }.onDelete(perform: removeWarmUpSet)
                     
                     Button(action: { onShowAddSet() }, label: {
@@ -60,7 +61,11 @@ struct NewWarmUpSchemaSheet: View {
                     })
             )
             .sheet(isPresented: $showAddSet, content: {
-                WarmUpSchemaSetSheet(reps: $reps, percentageOfWorkingLoad: $percentageOfWorkingLoad, onSave: onAddSet)
+                WarmUpSchemaSetSheet(
+                    reps: $reps,
+                    percentageOfWorkingLoad: $percentageOfWorkingLoad,
+                    fixedLoad: $fixedLoad,                    
+                    onSave: onAddSet)
             })
         }
     }
@@ -75,6 +80,7 @@ struct NewWarmUpSchemaSheet: View {
         order = order + 1
         reps = 0
         percentageOfWorkingLoad = 0.0
+        fixedLoad = 0.0
     }
 
     func onAddSet() {
@@ -83,6 +89,7 @@ struct NewWarmUpSchemaSheet: View {
                 id: .init(),
                 order: order,
                 reps: reps,
+                fixedLoad: fixedLoad,
                 percentageOfWorkingLoad: percentageOfWorkingLoad
             )
         )

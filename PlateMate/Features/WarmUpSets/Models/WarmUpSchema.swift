@@ -33,9 +33,10 @@ final class WarmUpSchema {
             var load = element.fixedLoad
             var percent = element.percentageOfWorkingLoad
 
-            if load != 0.0 {
+            switch element.loadType {
+            case .fixedLoad:
                 percent = load/workingLoad
-            } else {
+            case .percentage:
                 load = ((workingLoad * percent)/weightIncrement).rounded() * weightIncrement
             }
             warmUpSets.append(ActualWarmUpSet(reps: reps, load: load, percent: percent))
