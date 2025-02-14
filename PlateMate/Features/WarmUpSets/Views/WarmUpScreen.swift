@@ -22,6 +22,8 @@ struct WarmUpScreen: View {
 
     @State var warmUpSets: [ActualWarmUpSet] = []
 
+    @AppStorage("lastSelectedWarmUpSchemaID") private var lastSelectedWarmUpSchemaID: String?
+
     public init(workingSetWeight: Int = 0) {
         self.workingSetWeight = workingSetWeight
     }
@@ -45,6 +47,7 @@ struct WarmUpScreen: View {
                             Text("\(schema.name)").tag(schema as WarmUpSchema?)
                         }
                     }.onChange(of: selectedWarmUpSchema) {
+                        saveSelection()
                         calculateWarmupSets()
                     }
                     ForEach(warmUpSets, content: WarmUpRowView.init)
@@ -52,7 +55,7 @@ struct WarmUpScreen: View {
             }
             .navigationTitle("Warm-up Pyramid")
             .task {
-                calculateWarmupSets()
+                restoreSelection()
             }
         }
     }
@@ -61,6 +64,24 @@ struct WarmUpScreen: View {
     func calculateWarmupSets() {
         if let useWarmUpSchema = selectedWarmUpSchema {
             warmUpSets = useWarmUpSchema.calculate(workingLoad: Double(workingSetWeight))
+        }
+    }
+
+    /// Restores the last selected schema from user preferences
+    func restoreSelection() {
+        if let savedID = lastSelectedWarmUpSchemaID,
+           let restoredSchema = warmUpSchemas.first(where: { $0.id.uuidString == savedID }) {
+            selectedWarmUpSchema = restoredSchema
+        } else {
+            selectedWarmUpSchema = warmUpSchemas.first
+        }
+        calculateWarmupSets()
+    }
+
+    /// Saves the selected schema's ID to user preferences
+    func saveSelection() {
+        if let selectedSchema = selectedWarmUpSchema {
+            lastSelectedWarmUpSchemaID = selectedSchema.id.uuidString
         }
     }
 }
