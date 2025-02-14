@@ -15,14 +15,17 @@ struct PlateMateApp: App {
             WarmUpSchema.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            let context = container.mainContext
+            WarmUpSchemaSeeder.insertDefaultWarmUpSchemasIfNeeded(context: context)
+            return container
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
