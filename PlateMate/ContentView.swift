@@ -16,6 +16,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("Warm-Up", systemImage: "flame.fill")
                 }
+
+            RepMaxCalculatorView()
+                .tabItem {
+                    Label("RepMax", systemImage: "square.grid.3x3")
+                }
         }
     }
     
