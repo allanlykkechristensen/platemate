@@ -10,6 +10,12 @@ import SwiftData
 
 struct WarmUpScreen: View {
 
+    enum Sheet: String, Identifiable {
+        case warmUpSchemaList
+
+        var id: String { rawValue }
+    }
+
     // MARK: - Environmental dependencies
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var modelContext
@@ -17,6 +23,7 @@ struct WarmUpScreen: View {
     // MARK: - State
     @State var workingSetWeight: Int
     @State var selectedWarmUpSchema: WarmUpSchema?
+    @State private var presentedSheet: Sheet?
 
     @Query(sort: \WarmUpSchema.name) private var warmUpSchemas: [WarmUpSchema]
 
@@ -54,9 +61,26 @@ struct WarmUpScreen: View {
                 }
             }
             .navigationTitle("Warm-up Pyramid")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu {
+                        Button(action: { presentedSheet = .warmUpSchemaList }) {
+                            Label("Manage Schemas", systemImage: "list.bullet")
+                        }
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                }
+            }
             .task {
                 restoreSelection()
             }
+            .sheet(item: $presentedSheet, content: { sheet in
+                switch sheet {
+                case .warmUpSchemaList:
+                    WarmUpSchemaListView()
+                }
+            })
         }
     }
 

@@ -9,21 +9,16 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-
+    
     var body: some View {
         TabView {
             WarmUpScreen()
                 .tabItem {
                     Label("Warm-Up", systemImage: "flame.fill")
                 }
-
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
-                }
         }
     }
-
+    
 }
 
 #Preview {

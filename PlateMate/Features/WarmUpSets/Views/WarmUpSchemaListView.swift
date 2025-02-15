@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct WarmUpSchemaListView: View {
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \WarmUpSchema.name) private var warmUpSchemas: [WarmUpSchema]
 
@@ -37,6 +38,12 @@ struct WarmUpSchemaListView: View {
             )
             .navigationTitle("Warm-up Schemas")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: { dismiss() }) {
+                        Label("Dismiss", systemImage: "xmark.circle.fill")
+                    }
+                }
+
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
