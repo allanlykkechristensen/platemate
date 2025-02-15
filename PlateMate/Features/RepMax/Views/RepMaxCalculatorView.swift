@@ -47,9 +47,11 @@ struct RepMaxCalculatorView: View {
                 }
 
                 Section {
-                    RepMaxEstimatesView(repMaxs: repMaxes, highlightRep: Int(reps) ?? 0)
-                    Text("Using the \(selectedFormula.name) formula based on a set of \(reps) x \(weight)")
-                        .font(.footnote)
+                    ScrollView(.vertical) {
+                        RepMaxEstimatesView(repMaxs: repMaxes, highlightRep: Int(reps) ?? 0)
+                        Text("Using the \(selectedFormula.name) formula based on a set of \(reps) x \(weight)")
+                            .font(.footnote)
+                    }
                 }
             }
             .navigationTitle("RepMax Calculator")
