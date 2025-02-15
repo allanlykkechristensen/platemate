@@ -10,32 +10,27 @@ import SwiftUI
 struct RepMaxCalculatorView: View {
     enum Sheet: String, Identifiable {
         case formulaSelection
-
+        
         var id: String { rawValue }
     }
-
+    
     @State private var weight: String = "100"
     @State private var reps: String = "10"
     @AppStorage("defaultRepMaxFormula") private var defaultFormulaName = "Epley"
     @State private var selectedFormula: OneRepMaxFormula = EpleyFormula()
     @State private var repMaxes: [RepMax] = []
     @State private var presentedSheet: Sheet?
-
+    @FocusState private var weightIsFocused: Bool
+    @FocusState private var repsIsFocused: Bool
+    
     let formulas = FormulaFactory.formulas
-
+    
     var body: some View {
         NavigationView {
+            
             Form {
+                
                 Section("Enter Your Set") {
-                    HStack {
-                        Text("Weight (kg)")
-                        Spacer()
-                        TextField("Weight", text: $weight)
-                            .keyboardType(.decimalPad)
-                            .multilineTextAlignment(.trailing)
-                            .frame(width: 80)
-                    }
-                    
                     HStack {
                         Text("Reps")
                         Spacer()
@@ -43,15 +38,30 @@ struct RepMaxCalculatorView: View {
                             .keyboardType(.numberPad)
                             .multilineTextAlignment(.trailing)
                             .frame(width: 50)
+                            .focused($repsIsFocused)
+                    }
+                    
+                    HStack {
+                        Text("Weight (kg)")
+                        Spacer()
+                        TextField("Weight", text: $weight)
+                            .keyboardType(.decimalPad)
+                            .multilineTextAlignment(.trailing)
+                            .frame(width: 80)
+                            .focused($weightIsFocused)
                     }
                 }
-
+                
                 Section {
                     ScrollView(.vertical) {
                         RepMaxEstimatesView(repMaxs: repMaxes, highlightRep: Int(reps) ?? 0)
                         Text("Using the \(selectedFormula.name) formula based on a set of \(reps) x \(weight)")
                             .font(.footnote)
                     }
+                }
+                .onTapGesture {
+                    repsIsFocused = false
+                    weightIsFocused = false
                 }
             }
             .navigationTitle("RepMax Calculator")
@@ -79,13 +89,14 @@ struct RepMaxCalculatorView: View {
                 calculateRepMaxes()
             }
         }
+        
     }
-
+    
     func calculateRepMaxes() {
         guard let weightValue = Double(weight), let repsValue = Int(reps), repsValue > 0 else { return }
-
+        
         let calculator = RepMaxCalculator(reps: repsValue, load: weightValue, with: selectedFormula)
-
+        
         repMaxes = []
         for repCount in 1...20 {
             repMaxes
@@ -102,7 +113,7 @@ struct RepMaxCalculatorView: View {
                 )
         }
     }
-
+    
     func loadDefaultFormula() {
         selectedFormula = FormulaFactory.formula(named: defaultFormulaName)
     }
